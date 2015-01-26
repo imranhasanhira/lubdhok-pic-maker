@@ -1,1 +1,97 @@
-Hello World from Lubdhok'07
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BUET Lubdhok'07 Pic Maker</title>
+
+    <!-- Author: Md Imran Hasan Hira -->
+    <!-- Author: Dipranjan Das -->
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    
+    <div class="container">
+    	<div class="row text-center">
+	    	<h1>Welcome Lubdhok'07 - the most amazing batch of BUET</h1>	
+	    </div>
+
+	    <div class="row">
+	    	<div class="col-md-2"></div>
+	    	<div class="col-md-8">
+    			<input type="file" class="" text="Select your picture" id="uploadBannerImg" onchange="onImageUpload(this);" />
+	    	</div>
+	    </div>
+
+	    <div class="row">
+	    	<div class="col-md-2"></div>
+	    	<div class="col-md-8">
+			<input type="text" class="col-md-4 form-control" id="uploadText1" placeholder="Your Name" onchange="onText1Change(this)" />
+	    	<input type="text" class="col-md-4 form-control" id="uploadText2" placeholder="Student Id" onchange="onText2Change(this)" />
+	    	</div>
+	    </div>
+
+	    <div class="row">
+	    	<div class="col-md-2"></div>
+	    	<img src="" class="col-md-8" id="userImage"  height="300" />
+		    <div class="col-md-2">
+		    	<p id="text1"> Hello </p>
+		    	<p id="text2"> World </p>
+		    </div>
+	    </div>
+
+	    <div class="row"> 
+	    	<div class="col-md-2"></div>
+	    	<div class="col-md-8 text-right">
+	    		<p id="status"></p>
+	    		<button id="downloadButton" type="submit" class="btn btn-primary" onclick="onDownloadButtonClick(this);">Download</button>
+	    	</div>
+	    </div>
+    </div>
+
+
+    <script type="text/javascript">
+    	function onText1Change(input){
+    		document.getElementById("text1").innerHTML = input.value;
+    	}
+
+    	function onText2Change(input){
+    		document.getElementById("text2").innerHTML = input.value;
+    	}
+
+    	function onImageUpload(input) {
+		    document.getElementById("userImage").style.display = "block";
+
+		    if (input.files && input.files[0]) {
+		        var reader = new FileReader();
+
+		        reader.onload = function (e) {
+		            document.getElementById('userImage').src =  e.target.result;
+		        }
+
+		        reader.readAsDataURL(input.files[0]);
+		    }
+		}
+		function onDownloadButtonClick(input){
+			$('#downloadButton').removeClass('btn-primary');
+			$('#downloadButton').addClass('btn-info');
+			$('#downloadButton').html('Not Implemented');
+		}
+    </script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
