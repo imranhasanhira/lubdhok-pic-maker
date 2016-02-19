@@ -1,0 +1,33 @@
+{
+  "name": "lubdhok-pic-maker",
+  "version": "1.0.0",
+  "description": "Lubdhok Pic Maker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imranhasanhira/lubdhok-pic-maker.git"
+  },
+  "keywords": [
+    "Lundhok",
+    "Cover",
+    "Pictgure"
+  ],
+  "author": "Ibrahim Rashid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imranhasanhira/lubdhok-pic-maker/issues"
+  },
+  "homepage": "https://github.com/imranhasanhira/lubdhok-pic-maker",
+  "dependencies": {
+    "babel-preset-react": "^6.3.13",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-dropzone": "^3.3.2"
+  },
+  "devDependencies": {
+    "kickstart-node": "^3.0.75"
+  }
+}
